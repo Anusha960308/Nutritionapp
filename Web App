@@ -1,0 +1,45 @@
+const app=express();
+app.get('/demo',(req,res)
+{
+console;log(get request called")";
+res.send("response is done");
+})
+local host: 8000/demo;
+app.listen(8000);
+
+app.use(express.json());
+console.log(req,body);
+
+
+const app=express();
+{
+name:"Rice",
+protein:"20gms",
+carb:"20gms",
+}
+
+mongoose.connect("mongoose://127.0.0.1:27017/nutrition",
+{
+useNewurlParser:true,
+useunifiedtopology:true
+})
+.then(() {
+console.log("download");
+})
+
+const foodschema = new mongoose.schema({
+name:string,
+calories:Number,
+protien:Number,
+carbs:Number,
+fats:Number,
+fibre:Number,
+weight:Number,
+})
+
+const food model = new mongoose.model("foods",foodschema)
+
+app.post("/food/create",(req,res) {
+const food = req.body;
+res.send({status:"food stored"});
+})
